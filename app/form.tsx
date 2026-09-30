@@ -15,7 +15,7 @@ export default function FormScreen() {
 
   useEffect(() => {
     let active = true;
-    if (!serieId) { setLoading(false); return () => { active = false; }; }
+    if (!serieId) return () => { active = false; };
     void getSerieById(serieId).then((serie) => {
       if (!active) return;
       if (!serie) { Alert.alert('Série não encontrada'); router.back(); return; }
