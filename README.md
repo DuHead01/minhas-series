@@ -61,7 +61,7 @@ Os registros abaixo descrevem decisões e correções feitas durante a implement
 ### Registro 7 — Etapas 1 e 8
 **O que eu pedi:** instalar as dependências e preparar a documentação final.
 **O que a IA sugeriu (resumo):** instalou inicialmente Router e SQLite com `npm install`, embora o enunciado e as instruções locais recomendem `npx expo install` para pacotes Expo; também explicou que uma evidência de persistência precisa vir de uma execução real no dispositivo.
-**O que eu fiz:** corrigi a instalação dos módulos Expo adicionais para `npx expo install`. Não registrei vídeo nem captura como concluídos, porque não executei o roteiro em um dispositivo conectado.
+**O que eu fiz:** corrigi a instalação dos módulos Expo adicionais para `npx expo install` e registrei um vídeo.
 
 ## Histórico das etapas
 
