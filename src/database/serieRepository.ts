@@ -4,9 +4,19 @@ import type { CreateSerieInput, Serie, SerieFilter, UpdateSerieInput } from '../
 export async function getSeries(filtro: SerieFilter): Promise<Serie[]> {
   await runMigrations();
   const db = await getDatabase();
-  const where = filtro === 'assistindo' ? 'WHERE concluida = ?' : filtro === 'concluidas' ? 'WHERE concluida = ?' : '';
-  const args = filtro === 'assistindo' ? [0] : filtro === 'concluidas' ? [1] : [];
-  return db.getAllAsync<Serie>(`SELECT * FROM series ${where} ORDER BY createdAt DESC, id DESC`, args);
+  if (filtro === 'assistindo') {
+    return db.getAllAsync<Serie>(
+      'SELECT * FROM series WHERE concluida = ? ORDER BY createdAt DESC, id DESC',
+      0,
+    );
+  }
+  if (filtro === 'concluidas') {
+    return db.getAllAsync<Serie>(
+      'SELECT * FROM series WHERE concluida = ? ORDER BY createdAt DESC, id DESC',
+      1,
+    );
+  }
+  return db.getAllAsync<Serie>('SELECT * FROM series ORDER BY createdAt DESC, id DESC');
 }
 
 export async function getSerieById(id: number): Promise<Serie | null> {
