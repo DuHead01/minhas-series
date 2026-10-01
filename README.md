@@ -20,9 +20,9 @@ Abra o projeto no Expo Go em um dispositivo Android ou iOS. O banco `minhas-seri
 
 ## Verificação de persistência
 
-Roteiro manual: cadastre três séries, marque uma como concluída, edite outra, feche o Expo Go completamente e abra novamente. Confirme que os registros continuam na lista e que os três filtros continuam funcionando.
+O vídeo abaixo registra o teste de persistência gravado pelo autor do projeto:
 
-**Evidência visual pendente:** este ambiente não tem um dispositivo/simulador Expo conectado para gravar o teste real. Salve uma captura ou vídeo em `evidencias/persistencia.png` (ou `.mp4`) após executar o roteiro e adicione o link aqui.
+[▶️ Assistir ao vídeo de evidência](evidencias/Grava%C3%A7%C3%A3o%20de%20Tela%202026-09-30%20215325.mp4)
 
 ## Diário do copiloto
 
